@@ -1,0 +1,135 @@
+ul.nav {
+	list-style-type: none;
+	li {
+		float: left;
+		background: @nav-menu-bg-color;
+		.v-gradient();
+		text-align: center;
+		a {
+			text-decoration: none;
+			color: @white-color;
+			text-transform: capitalize;
+			padding: 0 50px;
+			font-size: 18px;
+			border-right: 1px solid darken(@nav-menu-bg-color, 5%);
+			margin: 17px 0;
+			white-space: nowrap;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			position: absolute;
+			top: 59px;
+			left: 0;
+			display: none;
+			.opacity(0);
+			visibility: hidden;
+
+			box-shadow: 0 1px 5px lighten(@black-color, 50%);
+			li {
+				width: 100%;
+				a {
+					text-decoration: none;
+					display: block;
+					color: @white-color;
+					padding: 10px 0;
+					font-size: 14px;
+					border-top: 1px solid darken(@nav-menu-bg-color, 15%);
+					margin: 0;
+					border-right: none;
+				}
+
+			}
+		}
+		&:hover{
+			background: darken(@nav-menu-bg-color, 5%);
+			a {
+				background: darken(@nav-menu-bg-color, 5%);
+			}
+			ul {
+				display: block;
+				.opacity(1);
+				visibility: visible;
+				z-index:1;
+				border-radius: 4px;
+				li {
+					a {
+						background: darken(@nav-menu-bg-color, 5%);
+						&:hover {
+							background: darken(@nav-menu-bg-color, 10%);
+						}
+					}
+					&:last-child{
+						border-radius: 4px;
+						a{
+							border-bottom-left-radius: 4px;
+							border-bottom-right-radius: 4px;
+						}
+					}
+
+				}
+			}
+		}
+	}
+	li:first-of-type {
+		.border-bottom-left-radius(5px);
+		.border-top-left-radius(5px);
+	}
+	li:last-of-type {
+		.border-bottom-right-radius(5px);
+		.border-top-right-radius(5px);
+		&:hover {
+			.border-bottom-right-radius(0);
+		}
+		a {
+			border-right: none;
+		}
+	}
+	li ul li:nth-of-type(n) {
+		.border-radius(0);
+	}
+	li {
+		ul li:last-of-type {
+			.border-bottom-left-radius(5px);
+			.border-bottom-right-radius(5px);
+		}
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		//display: none;
+		//clear: both;
+        li {
+        	float: none;
+        	background: @nav-menu-bg-color;
+        	a {
+        		border-right: none;
+        		border-bottom: 1px solid @nav-border-color;
+        		font-size: 16px;
+        		margin: 0;
+        		padding: 4% 10%;
+        		text-align: left;
+        	}
+        	ul {
+        		width: 100%;
+        		position: relative;
+				top: 0;
+        		li{
+        			a{
+        				padding: 3% 15%;
+        				font-size: 14px;
+        				border-top: none;
+        			}
+        		}
+        	}
+        }
+        li:first-of-type, li:last-of-type, li ul li:nth-of-type(n), li ul li:last-of-type {
+			.border-radius(0);
+		}
+        li ul li:nth-of-type(n) a{
+			border-bottom: none;
+		}
+		li ul li:last-of-type a {
+			border-bottom: 1px solid @nav-border-color;
+		}
+    }
+}

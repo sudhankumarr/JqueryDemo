@@ -1,0 +1,22 @@
+mixin form-header(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.type1 = content.type1 || '';
+	- content.type2 = content.type2 || '';
+	- content.type3 = content.type3 || '';
+	- content.name1 = content.name1 || '';
+	- content.name2 = content.name2 || '';
+	- content.value = content.value || '';
+	- content.inputClass = content.inputClass || '';
+	- content.placeholder1 = content.placeholder1 || '';
+	- content.placeholder2 = content.placeholder2 || '';
+
+	+div({class: 'container'})
+		form(name="login", action='', method='', class='login', novalidate)
+			fieldset
+				+div({class: 'row'})
+					+div({class:'col-md-12 login-info'})
+						label ACCESS YOUR ACCOUNT :
+						+input({type: content.type1, name: content.name1, class: 'js-login-validate-field js-email', placeholder: content.placeholder1})
+						+input({type: content.type2, name: content.name2, class: 'js-login-validate-field js-password', placeholder: content.placeholder2})
+						+input({type: content.type3, class: '', value: content.value})

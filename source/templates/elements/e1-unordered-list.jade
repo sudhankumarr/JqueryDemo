@@ -1,0 +1,8 @@
+mixin unordered-list(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.id = content.id || '';
+
+	ul(class=content.class, id=content.id)&attributes(attributes)
+		if block
+			block

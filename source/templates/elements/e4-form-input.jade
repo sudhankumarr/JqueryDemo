@@ -1,0 +1,10 @@
+mixin input(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.type = content.type || '';
+	- content.name = content.name || '';
+	- content.placeholder = content.placeholder || '';
+	- content.value = content.value || '';
+	- content.id = content.id || '';
+
+	input(type=content.type, name=content.name, class=content.class, id=content.id, placeholder=content.placeholder, value=content.value)&attributes(attributes)

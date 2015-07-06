@@ -1,0 +1,136 @@
+// Main Stylesheet// Import Lesshat Library
+
+@import './vendor/lesshat/build/lesshat';
+// Import Font Awesome Library
+
+@import './vendor/font-awesome/less/font-awesome';
+@fa-font-path: './vendor/font-awesome/fonts';
+
+// Import All Bootstrap Styles
+
+// Core variables and mixins
+@import "./vendor/bootstrap/less/variables.less";
+@import "./vendor/bootstrap/less/mixins.less";
+
+// Reset
+@import "./vendor/bootstrap/less/normalize.less";
+@import "./vendor/bootstrap/less/print.less";
+
+// Core CSS
+@import "./vendor/bootstrap/less/scaffolding.less";
+@import "./vendor/bootstrap/less/type.less";
+@import "./vendor/bootstrap/less/code.less";
+@import "./vendor/bootstrap/less/grid.less";
+@import "./vendor/bootstrap/less/tables.less";
+@import "./vendor/bootstrap/less/forms.less";
+@import "./vendor/bootstrap/less/buttons.less";
+
+// Components
+@import "./vendor/bootstrap/less/component-animations.less";
+@import "./vendor/bootstrap/less/glyphicons.less";
+@import "./vendor/bootstrap/less/dropdowns.less";
+@import "./vendor/bootstrap/less/button-groups.less";
+@import "./vendor/bootstrap/less/input-groups.less";
+@import "./vendor/bootstrap/less/navs.less";
+@import "./vendor/bootstrap/less/navbar.less";
+@import "./vendor/bootstrap/less/breadcrumbs.less";
+@import "./vendor/bootstrap/less/pagination.less";
+@import "./vendor/bootstrap/less/pager.less";
+@import "./vendor/bootstrap/less/labels.less";
+@import "./vendor/bootstrap/less/badges.less";
+@import "./vendor/bootstrap/less/jumbotron.less";
+@import "./vendor/bootstrap/less/thumbnails.less";
+@import "./vendor/bootstrap/less/alerts.less";
+@import "./vendor/bootstrap/less/progress-bars.less";
+@import "./vendor/bootstrap/less/media.less";
+@import "./vendor/bootstrap/less/list-group.less";
+@import "./vendor/bootstrap/less/panels.less";
+@import "./vendor/bootstrap/less/wells.less";
+@import "./vendor/bootstrap/less/close.less";
+
+// Components w/ JavaScript
+@import "./vendor/bootstrap/less/modals.less";
+@import "./vendor/bootstrap/less/tooltip.less";
+@import "./vendor/bootstrap/less/popovers.less";
+@import "./vendor/bootstrap/less/carousel.less";
+
+// Utility classes
+@import "./vendor/bootstrap/less/utilities.less";
+@import "./vendor/bootstrap/less/responsive-utilities.less";
+
+// Injects all imports files automatically (ex. _mypartial)
+// [injector]
+@import 'base/_base.less';
+@import 'base/_layout.less';
+@import 'base/_variables.less';
+@import 'custom-bootstrap/custom-bootstrap.less';
+@import 'custom-bootstrap/forms.less';
+@import 'custom-bootstrap/mixins.less';
+@import 'custom-bootstrap/mixins/gradients.less';
+@import 'custom-bootstrap/thumbnails.less';
+@import 'custom-bootstrap/variables.less';
+@import 'partials/_c1-navigation-bar.less';
+@import 'partials/_c2-form-header.less';
+@import 'partials/_c3-accordion.less';
+@import 'partials/_c4-product-category.less';
+@import 'partials/_c5-form-account.less';
+// [endinjector]
+
+body {
+    background: @body-bg-color url(@body-bg-image) 0 0 scroll repeat;
+    color: @body-color;
+}
+header {
+    background: @header-bg-color url(@header-bg-image) repeat left top scroll;
+    box-shadow: 0 1px 5px lighten(@black-color, 50%);
+}
+footer {
+    margin: 50px 0 0 0;
+    border-bottom: 5px solid @marine-blue;
+}
+
+.main-container {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.version {
+    font-size: 14px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.links a {
+    color: white;
+    margin-right: 5px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    //background: #ed7c6c;
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    font-size: 100%;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+// Styling on warning for users on IE7 or below
+.browsehappy {
+    text-align: center;
+    margin: 0;
+    background: @browse-happy-bg-color;
+    color: @black-color;
+    padding: 0.5em 0;
+}

@@ -1,0 +1,15 @@
+//- Homepage Markup
+extend ./templates/layouts/base
+
+block content
+	header
+		+form-header({class: '',type1: 'email',type2: 'password', type3: 'submit',inputClass: '',name1: 'email',name2: 'password',placeholder1:'Email Address', placeholder2:'Password', value: 'SIGN IN'})
+	.main-container
+		.container
+			h1.logo-container
+				a(href='/home.html')
+					img(src='images/logo-dingole.jpg')
+			+button({class: 'btn btn-default menu', type: 'button', value: 'Menu'})
+			+navigation-bar({class: 'nav', listClass: '', linkClass: '', linkText: ['home', 'products', 'get quote', 'contact us'], subLinkText: ['SUB-NAV ITEM','SUB-NAV ITEM', 'SUB-NAV ITEM', 'SUB-NAV ITEM']})
+			+product-category({})
+	footer

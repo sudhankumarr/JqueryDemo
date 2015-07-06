@@ -1,0 +1,81 @@
+include ../components/c1-navigation-bar
+include ../components/c2-form-header
+include ../components/c3-accordion
+include ../components/c4-product-category
+include ../components/c5-form-account
+include ../components/c6-form-payment
+
+include ../elements/e1-unordered-list
+include ../elements/e2-list-item
+include ../elements/e3-anchor
+include ../elements/e4-form-input
+include ../elements/e5-div
+include ../elements/e6-button
+include ../elements/e7-paragraph
+//- Base template
+//- All other templates should extend from this
+
+doctype html
+<!--[if IE 8]><html class='ie8 no-js' lang='en'><![endif]-->
+<!--[if IE 9]><html lang='en' class='ie9 no-js'><![endif]-->
+<!--[if !IE]><!-->
+html.no-js(lang='en')
+    <!--<![endif]-->
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        title demo
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        link(rel='stylesheet', href='./styles/main.css')
+
+        script(src='./scripts/vendor/modernizr/modernizr.js')
+
+        // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+        <!--[if lt IE 9]>
+        script(src='/bower_components/html5shiv/dist/html5shiv-printshiv.js')
+        script.
+            // Protect window.console method calls, e.g. console is not defined on IE
+            (function() {
+                if (!window.console) {
+                    window.console = {};
+                }
+                // union of Chrome, FF, IE, and Safari console methods
+                var m = [
+                    'log', 'info', 'warn', 'error', 'debug', 'trace', 'dir', 'group',
+                    'groupCollapsed', 'groupEnd', 'time', 'timeEnd', 'profile', 'profileEnd',
+                    'dirxml', 'assert', 'count', 'markTimeline', 'timeStamp', 'clear'
+                ];
+                // define undefined methods as noops to prevent errors
+                for (var i = 0; i < m.length; i++) {
+                    if (!window.console[m[i]]) {
+                        window.console[m[i]] = function() {};
+                    }
+                }
+            })();
+        <![endif]-->
+    body
+        <!--[if lte IE 7]>
+        <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/''>upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        block content
+
+
+        // build:js(client) scripts/global.js
+        script(src='./scripts/vendor/jquery/dist/jquery.js')
+        script(src='./scripts/vendor/bootstrap/js/affix.js')
+        script(src='./scripts/vendor/bootstrap/js/alert.js')
+        script(src='./scripts/vendor/bootstrap/js/button.js')
+        script(src='./scripts/vendor/bootstrap/js/carousel.js')
+        script(src='./scripts/vendor/bootstrap/js/collapse.js')
+        script(src='./scripts/vendor/bootstrap/js/dropdown.js')
+        script(src='./scripts/vendor/bootstrap/js/modal.js')
+        script(src='./scripts/vendor/bootstrap/js/scrollspy.js')
+        script(src='./scripts/vendor/bootstrap/js/tab.js')
+        script(src='./scripts/vendor/bootstrap/js/tooltip.js')
+        script(src='./scripts/vendor/bootstrap/js/popover.js')
+        script(src='./scripts/vendor/bootstrap/js/transition.js')
+        // endbuild
+
+        script(src='./scripts/main.js')

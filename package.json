@@ -1,0 +1,11 @@
+{
+  "name": "new-project",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jade": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-less": "latest"
+  }
+}

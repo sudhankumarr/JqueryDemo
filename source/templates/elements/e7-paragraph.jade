@@ -1,0 +1,11 @@
+mixin paragraph(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.id = content.id || '';
+	- content.text = content.text || '';
+
+	p(class=content.class ,id=content.id)&attributes(attributes)
+		if block
+			block
+		else
+			!=content.text

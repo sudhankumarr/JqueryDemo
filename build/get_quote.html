@@ -1,0 +1,270 @@
+<!DOCTYPE html><!--[if IE 8]><html class='ie8 no-js' lang='en'><![endif]-->
+<!--[if IE 9]><html lang='en' class='ie9 no-js'><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/vendor/modernizr/modernizr.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]>
+    <script src="/bower_components/html5shiv/dist/html5shiv-printshiv.js"></script>
+    <script>
+      // Protect window.console method calls, e.g. console is not defined on IE
+      (function() {
+          if (!window.console) {
+              window.console = {};
+          }
+          // union of Chrome, FF, IE, and Safari console methods
+          var m = [
+              'log', 'info', 'warn', 'error', 'debug', 'trace', 'dir', 'group',
+              'groupCollapsed', 'groupEnd', 'time', 'timeEnd', 'profile', 'profileEnd',
+              'dirxml', 'assert', 'count', 'markTimeline', 'timeStamp', 'clear'
+          ];
+          // define undefined methods as noops to prevent errors
+          for (var i = 0; i < m.length; i++) {
+              if (!window.console[m[i]]) {
+                  window.console[m[i]] = function() {};
+              }
+          }
+      })();
+    </script><![endif]-->
+  </head>
+  <body>
+    <!--[if lte IE 7]>
+    <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/''>upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header>
+      <div id="" class="container">
+        <form name="login" action="" method="" novalidate="novalidate" class="login">
+          <fieldset>
+            <div id="" class="row">
+              <div id="" class="col-md-12 login-info">
+                <label>ACCESS YOUR ACCOUNT :</label>
+                <input type="email" name="email" id="" placeholder="Email Address" value="" class="js-login-validate-field js-email"/>
+                <input type="password" name="password" id="" placeholder="Password" value="" class="js-login-validate-field js-password"/>
+                <input type="submit" name="" id="" placeholder="" value="SIGN IN"/>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="logo-container"><a href="/home.html"><img src="images/logo-dingole.jpg"></a></h1>
+            <button type="button" class="btn btn-default menu">Menu
+            </button>
+            <ul id="" class="nav">
+              <li id="" class="main-menu"><a id="" href="./home.html">home</a>
+              </li>
+              <li id="" class="main-menu"><a id="" href="./products.html">products</a>
+              </li>
+              <li id="" class="main-menu"><a id="" href="./get quote.html">get quote</a>
+              </li>
+              <li id="" class="main-menu"><a id="" href="./contact us.html">contact us</a>
+                <ul id="">
+                  <li id=""><a id="" href="#persist">SUB-NAV ITEM</a>
+                  </li>
+                  <li id=""><a id="" href="#persist">SUB-NAV ITEM</a>
+                  </li>
+                  <li id=""><a id="" href="#persist">SUB-NAV ITEM</a>
+                  </li>
+                  <li id=""><a id="" href="#persist">SUB-NAV ITEM</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="" class="form-account">
+          <h2 class="account-header"></h2>
+          <form name="account" action="/get_quote.html" method="get" id="account" novalidate="novalidate" class="account">
+            <fieldset>
+              <h4 class="error-msg hide">Please fill all the mandatory fields</h4>
+              <legend class="form-heading">General Information</legend>
+              <div id="" class="form-group">
+                <label for="fname" class="fname-label js-fname-label">First Name<span>*</span></label>
+                <input type="text" name="first-name" id="fname" placeholder="" value="" class="fname account-form-input js-validate-field js-name"/>
+              </div>
+              <div id="" class="form-group">
+                <label for="lname" class="lname-label js-lname-label">Last Name<span>*</span></label>
+                <input type="text" name="last-name" id="lname" placeholder="" value="" class="lname account-form-input js-validate-field js-name"/>
+              </div>
+              <div id="" class="form-group">
+                <label for="email-address" class="email-label js-lname-label">Email Address<span>*</span></label>
+                <input type="email" name="email-id" id="email-address" placeholder="" value="" class="email-id account-form-input js-validate-field js-email"/>
+              </div>
+              <div id="" class="form-group">
+                <fieldset>
+                  <label class="phone-numlist">Phone Number<span>*</span></label>
+                  <div id="" class="field-group-wrapper hidden-xs">
+                    <input type="text" name="phone-number" id="contact-number1" placeholder="" value="" class="phone-number js-phone-number1 account-form-input js-validate-field" maxlength="3"/>
+                    <input type="text" name="phone-number" id="contact-number2" placeholder="" value="" class="phone-number js-phone-number2 account-form-input js-validate-field" maxlength="3"/>
+                    <input type="text" name="phone-number" id="contact-number3" placeholder="" value="" class="phone-number js-phone-number3 account-form-input js-validate-field" maxlength="4"/>
+                  </div>
+                  <div id="" class="field-group-wrapper visible-xs">
+                    <input type="text" name="phone-number" id="contact-number1" placeholder="" value="" class="phone-number js-phone-number4 account-form-input js-validate-field" maxlength="10"/>
+                  </div>
+                </fieldset>
+              </div>
+              <div id="" class="form-group">
+                <fieldset>
+                  <label class="dob">Date of Birth<span>*</span></label>
+                  <div id="" class="field-group-wrapper js-validate-dob hidden-xs">
+                    <select title="month" class="select-dob js-select-month js-select">
+                      <option value="default">Month</option>
+                      <option value="Jan">Jan</option>
+                      <option value="Feb">Feb</option>
+                      <option value="Mar">Mar</option>
+                      <option value="Apr">Apr</option>
+                      <option value="May">May</option>
+                    </select>
+                    <select title="day" class="select-dob js-select-day js-select">
+                      <option value="default">Day</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <select title="year" class="select-dob js-select-year js-select">
+                      <option value="default">Year</option>
+                      <option value="2011">2011</option>
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                    </select>
+                  </div>
+                  <div id="" class="field-group-wrapper visible-xs">
+                    <input type="date" name="selectdate" id="" placeholder="" value="" class="select-date js-input-date js-validate-field"/>
+                  </div>
+                </fieldset>
+              </div>
+              <div id="" class="form-group">
+                <fieldset>
+                  <legend class="legend">Gender<span>*</span></legend>
+                  <div id="" class="gender-female">
+                    <input type="radio" name="gender" id="female" placeholder="" value="Female" class="gender js-gender"/>
+                    <label for="female">Female</label>
+                  </div>
+                  <div id="" class="gender-male">
+                    <input type="radio" name="gender" id="male" placeholder="" value="Male" class="gender js-gender"/>
+                    <label for="male">Male</label>
+                  </div>
+                  <div id="" class="form-group">
+                  </div>
+                </fieldset>
+              </div>
+              <div id="" class="form-group">
+                <div id="" class="field js-gender-wrapper hide">
+                  <fieldset>
+                    <div id="" class="gender-option">
+                      <legend class="legend"></legend>
+                      <div id="" class="gender-opt1">
+                        <input type="checkbox" name="option" id="option1" placeholder="" value="" class="option js-option"/>
+                        <label for="option1">Option1</label>
+                      </div>
+                      <div id="" class="gender-opt2">
+                        <input type="checkbox" name="option" id="option2" placeholder="" value="" class="option js-option"/>
+                        <label for="option2">Option2</label>
+                      </div>
+                      <div id="" class="gender-opt3">
+                        <input type="checkbox" name="option" id="option3" placeholder="" value="" class="option js-option"/>
+                        <label for="option3">Option3</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <div id="" class="form-group">
+                <fieldset>
+                  <legend class="form-heading">Payment Options:</legend>
+                  <div id="" class="payment-opt">
+                    <button type="button" data-toggle="modal" data-target="#payment-popup" class="payment-btn"><span class="glyphicon glyphicon-plus"></span>ADD NEW PAYMENT OPTION</button>
+                  </div>
+                </fieldset>
+              </div>
+              <div id="" class="submit">
+                <input type="submit" name="" id="account-submit" placeholder="" value="SUBMIT" class="account-submit"/>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div id="" class="form-payment">
+          <div id="payment-popup" class="modal fade">
+            <div id="" class="modal-dialog modal-sm">
+              <div id="" class="modal-content">
+                <div id="" class="modal-body">
+                  <div id="" class="payment-container">
+                    <form name="payment" action="/get_quote.html" method="get" id="creditcard-payment" novalidate="novalidate" class="card-payment js-card-payment">
+                      <div id="" class="form-group">
+                        <label for="creditcardno">Credit Card Number</label>
+                        <input type="text" name="" id="creditcardno" placeholder="Enter Card Number" value="" class="form-control"/>
+                      </div>
+                      <div id="" class="form-group">
+                        <label for="expirydate">Expiration Date*</label>
+                      </div>
+                      <div id="" class="form-inline">
+                        <div id="" class="form-group">
+                          <select id="expirydate" class="form-control">
+                            <option value="default">Month</option>
+                            <option value="jan">Jan</option>
+                            <option value="feb">Feb</option>
+                            <option value="mar">Mar</option>
+                          </select>
+                        </div>
+                        <div id="" class="form-group">
+                          <select class="form-control">
+                            <option value="default">Year</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div id="" class="form-group">
+                        <label for="creditcardtype">Credit Card Type*</label>
+                        <select id="creditcardtype" class="form-control">
+                          <option value="default">Visa</option>
+                          <option value="master">Master</option>
+                          <option value="american express">American Express</option>
+                        </select>
+                      </div>
+                      <button type="submit" data-dismiss="modal" aria-hidden="true" class="btn btn-primary">Add</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <!-- build:js(client) scripts/global.js-->
+    <script src="./scripts/vendor/jquery/dist/jquery.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/affix.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/alert.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/button.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/carousel.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/collapse.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/dropdown.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/modal.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/scrollspy.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/tab.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/tooltip.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/popover.js"></script>
+    <script src="./scripts/vendor/bootstrap/js/transition.js"></script>
+    <!-- endbuild-->
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

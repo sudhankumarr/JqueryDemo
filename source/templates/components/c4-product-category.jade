@@ -1,0 +1,27 @@
+mixin product-category(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+
+	// hidden in mobile view
+	+div({class: 'product-container hidden-xs'})
+		h2.product-header. Product Category Page
+		+div({class: 'carousel-arrows-wrapper'})
+			i.fa.fa-caret-left.js-pager-left
+			i.fa.fa-caret-right.js-pager-right
+		+div({class: 'carousel-wrapper'})
+			+div({class: 'carousel-container'})
+			+div({class: 'carousel-container hide'})
+		+div({class: 'carousel-arrows-wrapper'})
+			i.fa.fa-caret-left.js-pager-left
+			i.fa.fa-caret-right.js-pager-right
+
+	// visible in mobile view
+	+div({class: 'product-container visible-xs'})
+		h2.product-header. Product Category Page
+		+div({class: 'carousel-wrapper'})
+			+div({class: 'carousel-container'})
+			+div({class: 'carousel-container hide'})
+		+div({class: 'carousel-arrows-wrapper'})
+			i.fa.fa-caret-left.js-pager-left
+			i.fa.fa-caret-right.js-pager-right
+

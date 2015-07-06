@@ -1,0 +1,37 @@
+mixin form-payment(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.id = content.id || '';
+
+	+div({class: content.class})
+		+div({class: 'modal fade', id: 'payment-popup', tabindex: '-1', role:'dialog'})
+			+div({class: 'modal-dialog modal-sm'})
+				+div({class: 'modal-content'})
+					+div({class: 'modal-body'})
+						+div({class: 'payment-container'})
+							form(name="payment", action='/get_quote.html', method='get', class='card-payment js-card-payment', id='creditcard-payment', novalidate)
+								+div({class: 'form-group'})
+									label(for='creditcardno') Credit Card Number
+									+input({id: 'creditcardno', class: 'form-control', type: 'text', placeholder: 'Enter Card Number'})
+								+div({class: 'form-group'})
+									label(for='expirydate') Expiration Date*
+								+div({class: 'form-inline'})
+									+div({class: 'form-group'})
+										select(class='form-control', id="expirydate")
+											option(value='default') Month
+											option(value='jan') Jan
+											option(value='feb') Feb
+											option(value='mar') Mar
+									+div({class: 'form-group'})
+										select(class='form-control')
+											option(value='default') Year
+											option(value='2015') 2015
+											option(value='2016') 2016
+											option(value='2017') 2017
+								+div({class: 'form-group'})
+									label(for='creditcardtype') Credit Card Type*
+									select(class='form-control', id="creditcardtype")
+										option(value='default') Visa
+										option(value='master') Master
+										option(value='american express') American Express
+								button(type='submit', class='btn btn-primary', data-dismiss='modal', aria-hidden='true') Add

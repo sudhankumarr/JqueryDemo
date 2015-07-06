@@ -1,0 +1,57 @@
+/*header*/
+.top-header {
+    text-align: left;
+    margin: 10px 0;
+    display: inline-block;
+    font-family: vivaldi;
+    font-weight: bold;
+    float: left;
+    @media (min-width: 320px) and (max-width: 480px) {
+        float: none;
+    }
+}
+.logo-container{
+    margin-top: 0;
+    clear: both;
+    @media (min-width: 320px) and (max-width: 480px) {
+        display: inline-block;
+        img{
+            width: 3em;
+        }
+    }
+}
+
+button.menu {
+    margin: 20px 0 15px 30px;
+    float: right;
+    display: none;
+    background: #A3A1A1;
+    color: @white-color;
+    @media (min-width: 320px) and (max-width: 480px) {
+        display: inline-block;
+        margin-bottom: 0;
+    }    
+}
+/* End of header*/
+
+/*form error classes*/
+.error-msg {
+    color: @error-color !important;
+    padding: 0 0 10px 15px;
+}
+.error-field {
+    border: 1px solid @error-color !important;
+    box-shadow: none !important;
+}
+.error-label {
+    color: @error-color !important;
+}
+
+.demo{
+    color: gold;
+    .v-gradient;
+}
+
+.account-header{
+    margin-bottom:  35px;
+}

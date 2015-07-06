@@ -1,0 +1,17 @@
+mixin navigation-bar(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.listClass = content.listClass || '';
+	- content.linkClass = content.linkClass || '';
+	- content.linkText = content.linkText || [];
+	- content.subLinkText = content.subLinkText || [];
+
+	+unordered-list({class: content.class})
+		each val, i in content.linkText
+			+list-item({class: [content.listClass,'main-menu']})
+				+anchor({class: content.linkClass, text: val, href: './'+val+'.html'})
+				if	i==3
+					+unordered-list({})
+						each val, j in content.subLinkText
+							+list-item({class: content.listClass})
+								+anchor({text: val})

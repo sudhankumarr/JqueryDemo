@@ -1,0 +1,12 @@
+mixin anchor(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.id = content.id || '';
+	- content.href = content.href || '#persist';
+	- content.text = content.text || '';
+
+	a(class=content.class, id=content.id, href=content.href)&attributes(attributes)
+		if block
+			block
+		else
+			!=content.text

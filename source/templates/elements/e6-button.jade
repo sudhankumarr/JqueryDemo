@@ -1,0 +1,11 @@
+mixin button(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.type = content.type || '';
+	- content.value = content.value || '';
+
+	button(class=content.class, type=content.type)
+		if block
+			block
+		else
+			!=content.value

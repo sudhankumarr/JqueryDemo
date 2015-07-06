@@ -1,0 +1,142 @@
+.form-account{
+	margin: 20px 0 0 0;
+	clear: both;
+
+	.field {
+		margin: 0 0 15px 0;
+		.field-group-wrapper {
+			padding-right: 0;
+
+		}
+	}
+	.form-heading{
+		color: lighten(@nav-menu-bg-color, 5%);
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: normal;
+	}
+	legend, label{
+		font-weight: normal;
+		font-size: 16px;
+		span{
+			color: @nav-menu-bg-color;
+			margin-left: 2px;
+			font-weight: bold;
+		}
+	}
+
+	.gender-option {
+		background: url(@header-bg-image) repeat 0 0 scroll @header-bg-color;		
+		padding: 15px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: darken(@header-bg-color, 10%) lighten(@header-bg-color, 90%) lighten(@header-bg-color, 90%) darken(@header-bg-color, 10%);
+		legend{
+			color: lighten(@header-bg-color, 30%);
+		}
+		.gender-opt1,
+		.gender-opt2,
+		.gender-opt3{
+			label{
+				color: lighten(@header-bg-color, 30%);
+				font-size: 14px;
+				margin-left: 5px;
+				position: relative;
+				bottom: 2px;
+			}
+		}
+	}
+	.gender {
+		& + label {
+			font-weight: normal;
+		}
+	}
+	
+	.select-dob, .payment-btn, .account-submit{
+		text-align: center;
+	}
+
+	.account-submit{
+		padding: 10px 20px;
+		color: @white-color;
+		font-size: 16px;
+		background: @marine-blue;
+		border: none;
+		.border-radius(5px);
+	}
+	.submit {
+		padding: 50px 0 0 0;
+	}
+	.account-form-input,
+	.select-dob {		
+		.shadow-box;
+	}
+	.payment-btn {
+		padding: 5px 10px;
+		background: transparent;
+		border: 1px solid lighten(@form-button-border-color, 10%);
+		font-size: 12px;
+		.border-radius(5px);
+		.glyphicon-plus {
+			font-size: 16px;
+			padding: 0 5px 0 0;
+			color: @marine-blue;
+			font-weight: bold;
+		}
+	}
+	.error-msg {
+		color: @error-color;
+		padding: 0 0 10px 15px;
+	}
+	.error-field {
+		border: 1px solid @error-color;
+		box-shadow: none;
+	}
+	.error-label {
+		color: @error-color;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		.fname,
+		.lname,
+		.email-id,
+		.fname-label,
+		.lname-label,
+		.email-label{
+			width: 100%;
+		}
+
+		.phone-number,
+		.select-date{
+			width: 100%;
+			.shadow-box;
+		}
+
+
+
+	}
+}
+
+//----------------
+.fname,
+.lname,
+.email-id{
+	width: 31%;
+}
+.fname-label,
+.lname-label,
+.email-label{
+	width: 30%;
+	display: block;
+}
+
+.phone-number,
+.select-dob{
+	width: 10%;
+}
+
+.gender-male input,
+.gender-female input{
+	margin-left: 0;
+}
+//----------------

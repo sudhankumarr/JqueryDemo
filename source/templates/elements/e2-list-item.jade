@@ -1,0 +1,8 @@
+mixin list-item(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.id = content.id || '';
+
+	li(class=content.class, id=content.id)&attributes(attributes)
+		if block
+			block

@@ -1,0 +1,18 @@
+mixin accordion(content)
+	- var content = content || {};
+	- content.class = content.class || '';
+	- content.headerText = content.headerText || [];
+
+	+div({class: ['accordion-group',content.class]})
+		each val,i in content.headerText
+			+div({class: 'accordion-header clearfix'})
+				+anchor({id: ''})
+					span= val
+					i(class="fa fa-plus-circle")
+					i(class="fa fa-minus-circle hide")
+			+div({class: 'accordion-body'})
+				h4. LOREM IPSUM TITLE
+				+paragraph({text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.'})
+				+anchor({text: ''})
+					i(class="fa fa-times-circle")
+					span Close Accordion
